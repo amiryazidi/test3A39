@@ -1,0 +1,17 @@
+<h1> bonjour  {{n | lower}}</h1>
+
+
+{% set x=6 %}
+{{x}}
+
+{% for t in a %}
+    {{t.username}}
+    <img src="{{t.picture}}" alt="">
+        {% if(t.nb_books>0) %}
+        <input type="submit" value="buy">
+        {% endif %}
+        <a href="{{path('d',{'id':t.username})}}">  details </a>
+{%  endfor %}
+{{dump(a)}}
+
+{{a[0].username}}
